@@ -4,7 +4,7 @@
 
 Este proyecto de aplicación web en ASP.NET permite gestionar usuarios mediante un sistema CRUD (Crear, Leer, Actualizar y Eliminar) y un sistema de autenticación de inicio de sesión. Utiliza SQL Server para el almacenamiento de datos y está diseñado con Bootstrap para ser completamente responsivo.
 
-![Proyecto](https://github.com/KimberlyA28/ProyectoASP_CRUD/img/proyecto.jpg)
+![Proyecto](https://github.com/KimberlyA28/ProyectoASP_CRUD/img/crud.jpg)
 
 ## Características:
 
@@ -78,7 +78,7 @@ Presiona F5 para ejecutar la aplicación. Esto abrirá el proyecto en el navegad
 
 ### Estructura del Proyecto
 
-bash
+Estructura:
 ```
 /ProyectoASP.NET
 ├── /Controllers
