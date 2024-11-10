@@ -1,27 +1,37 @@
-# Descripción
+# Sistema de Gestión de Usuarios - ASP.NET CRUD
+
+## 📝 Descripción
+
 Este proyecto de aplicación web en ASP.NET permite gestionar usuarios mediante un sistema CRUD (Crear, Leer, Actualizar y Eliminar) y un sistema de autenticación de inicio de sesión. Utiliza SQL Server para el almacenamiento de datos y está diseñado con Bootstrap para ser completamente responsivo.
 
-!proyecto Crud](crud.jsp)
+![Proyecto](https://github.com/KimberlyA28/ProyectoASP_CRUD/img/proyecto.jpg)
 
-Características: 
-Autenticación de usuario: Permite verificar las credenciales para el inicio de sesión.
+## Características:
 
-CRUD de usuarios: Funcionalidades para crear, leer, actualizar y eliminar usuarios.
+- Autenticación de usuario: Permite verificar las credenciales para el inicio de sesión.
 
-Base de datos SQL Server: Utiliza SQL Server para almacenar de manera segura las credenciales de usuario.
+- CRUD de usuarios: Funcionalidades para crear, leer, actualizar y eliminar usuarios.
 
-Interfaz responsiva: Se ha utilizado Bootstrap para asegurar que la aplicación se adapte a diferentes tamaños de pantalla.
+- Base de datos SQL Server: Utiliza SQL Server para almacenar de manera segura las credenciales de usuario.
 
-Requisitos
-Visual Studio o cualquier editor compatible con ASP.NET.
-SQL Server para gestionar la base de datos.
-.NET Framework compatible con ASP.NET.
-Configuración
-Crear la base de datos
-Ejecuta el siguiente script SQL en SQL Server para crear la base de datos y la tabla de usuarios:
+- Interfaz responsiva: Se ha utilizado Bootstrap para asegurar que la aplicación se adapte a diferentes tamaños de pantalla.
+
+## Requisitos:
+
+- [x] Visual Studio o cualquier editor compatible con ASP.NET.
+- [x] SQL Server para gestionar la base de datos.
+- [x] .NET Framework compatible con ASP.NET.
+
+## Configuración:
+
+### Crear la base de datos
+
+- Ejecuta el siguiente script SQL en SQL Server para crear la base de datos y la tabla de usuarios:
+
+`Copiar código`
 
 sql
-Copiar código
+```
 CREATE DATABASE UsuariosDB;
 USE UsuariosDB;
 
@@ -33,34 +43,43 @@ CREATE TABLE Usuarios (
 
 -- Inserta un usuario inicial
 INSERT INTO Usuarios (Usuario, Contraseña) VALUES ('kimberly', 'alianza');
-Configurar la cadena de conexión
+```
+
+## Configurar la cadena de conexión
+
 Abre el archivo Web.config de tu proyecto.
 Dentro de la sección <connectionStrings>, agrega la siguiente cadena de conexión:
+
+`Copiar código`
+
 xml
-Copiar código
+```
 <connectionStrings>
     <add name="conexion" connectionString="Data Source=TU_SERVIDOR;Initial Catalog=UsuariosDB;Integrated Security=True" providerName="System.Data.SqlClient" />
 </connectionStrings>
+```
 
-Nota: Reemplaza TU_SERVIDOR con el nombre de tu servidor SQL.
+> [!IMPORTANT]
+> Reemplaza TU_SERVIDOR con el nombre de tu servidor SQL.
 
 Ejecutar el proyecto
 Abre el proyecto en Visual Studio.
 Presiona F5 para ejecutar la aplicación. Esto abrirá el proyecto en el navegador, donde podrás empezar a gestionar los usuarios.
 
-Funcionalidades:
+## Funcionalidades:
 
-Login: Permite a los usuarios iniciar sesión con su nombre de usuario y contraseña.
+* Login: Permite a los usuarios iniciar sesión con su nombre de usuario y contraseña.
 
-Registrar Usuario: Permite registrar nuevos usuarios en el sistema.
+* Registrar Usuario: Permite registrar nuevos usuarios en el sistema.
 
-Editar Usuario: Permite modificar los datos de un usuario existente.
+* Editar Usuario: Permite modificar los datos de un usuario existente.
 
-Eliminar Usuario: Permite eliminar usuarios del sistema.
+* Eliminar Usuario: Permite eliminar usuarios del sistema.
 
-Estructura del Proyecto
+### Estructura del Proyecto
 
 bash
+```
 /ProyectoASP.NET
 ├── /Controllers
 │   └── UsuarioController.cs    # Controlador para gestionar usuarios
@@ -74,7 +93,8 @@ bash
 │   └── UsuariosDB.mdf         # Base de datos local (si corresponde)
 ├── Web.config                 # Configuración de la aplicación y cadena de conexión
 └── Global.asax                # Archivo de configuración global
+```
 
-Conclusión
+## Conclusión
 
 Este proyecto proporciona una forma sencilla de gestionar usuarios mediante un sistema CRUD y autenticación. Con las configuraciones y estructura descritas, podrás comenzar a modificar y ampliar la funcionalidad según tus necesidades.
